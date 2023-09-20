@@ -12,6 +12,7 @@ spec:
       labels:
         app: strela
     spec:
+      serviceAccountName: simple-controller
       containers:
       - name: default
         image: frederickbaier/strela
