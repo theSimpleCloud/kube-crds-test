@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: strela-deployment
+spec:
+  selector:
+    matchLabels:
+      app: strela
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: strela
+    spec:
+      containers:
+      - name: default
+        image: ghcr.io/thesimplecloud/strela:main
